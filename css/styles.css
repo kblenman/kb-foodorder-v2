@@ -1,0 +1,163 @@
+/* --------------------------------------------------
+	All Screens
+   -------------------------------------------------- */
+/* Basic Structure & Styles */
+html {
+	height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+
+#container {
+	height: 100%;
+	overflow-y: hidden;
+}
+
+.brand-logo {
+	margin-left: 15px;
+}
+
+#sidemenu li {
+	border-bottom: 1px solid gray;
+}
+
+#menu .btn, #cart .btn {
+	width: 100%;
+}
+
+/* Cart Specific Structure & Styles */
+#alert {
+	display: none;
+	font-size: 20px;
+	color: red;
+	position: relative;
+	bottom: 12px;
+	left: 52px;
+}
+
+#cart {
+	display: grid;
+	grid-template-rows: 40px 1fr 40px 40px;
+	overflow-y: hidden;
+}
+
+#cartHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 3px;
+	position: relative;
+}
+
+#hide-cart {
+	position: absolute;
+	right: 5px;
+}
+
+#cart .btn {
+	height: 100%;
+}
+
+#cartTotal {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#cartItemsContainer {
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+	overflow-y: auto;
+}
+
+#cartItemsContainer > div {
+	margin: 5px;
+}
+
+.cartItem {
+	display: grid;
+	grid-template-columns: 1fr 60px 100px;
+	border-bottom: 1px solid black;
+	padding: 5px;
+}
+
+.cartItem > p {
+	display: flex;
+	font-size: 1.3em;
+}
+
+.cartItem select, .cartItem button {
+	max-height: 40px;
+}
+
+
+/* --------------------------------------------------
+	Mobile & Tablet - 0px to 992px
+   -------------------------------------------------- */
+@media screen and (max-width: 992px) {
+	#container {
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+
+	#menu {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+		padding: 20px;
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	#cart {
+		/*Intially hide cart. Visibility will change by pressing cart button*/
+		display: none;
+		height: 80%;
+		width: 70%;
+		position: absolute;
+		top: 50px;
+		z-index: 2;
+		border: 1px solid #4db6ac;
+	}
+}
+
+/* --------------------------------------------------
+	Tablet Specific - 750px to 992px
+   -------------------------------------------------- */
+@media screen and (min-width: 750px) and (max-width: 992px) {
+	#menu {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+/* --------------------------------------------------
+	Desktops - Min Screen Width 993px
+   -------------------------------------------------- */
+@media screen and (min-width: 993px) {
+	#container {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+	}
+
+	#menu, #cart {
+		height: 100%;
+	}
+
+	#menu {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 20px;
+		padding: 20px;
+		overflow-y: auto;
+	}
+
+}

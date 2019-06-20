@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Island Breeze</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Reset styles -->
+		<link type="text/css" rel="stylesheet" href="css/reset.css"/>
+		<!--Import Google Icon Font-->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <!--Import materialize.css-->
+	    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+	    <!-- Custom stylesheet (overwrites materialize where necessary) -->
+	    <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+	</head>
+
+	<body>
+		<nav>
+			<div class="nav-wrapper teal lighten-1">
+				<a href="#" class="brand-logo left">Island Breeze</a>
+				<a href="#" data-target="sidemenu" class="sidenav-trigger right">
+					<i class="material-icons">menu</i>
+				</a>
+				<a href="#" id="show-cart">
+					<i class="material-icons hide-on-large-only right">shopping_cart</i>
+				</a>
+				<i id="alert" class="material-icons hide-on-large-only right">priority_high</i>
+				<ul id="nav-mobile" class="hide-on-med-and-down right">
+					<li><a href="#">Home</a></li>
+					<li class="active"><a href="./index.html">Order Online</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<ul class="sidenav" id="sidemenu">
+		    <li><a href="#">Home</a></li>
+			<li class="active"><a href="index.html">Order Online</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+
+		<div id="container" class="grey lighten-3">
+			<!-- ------------Start of Menu------------ -->
+			<div id="menu">
+				<div class="card medium">
+					<div class="card-image">
+			          <img src="images/carrotCremeSoup.jpg">
+			        </div>
+			        <div class="card-content center-align">
+			          	<p>Carrot Creme Soup</p>
+			          	<p>$10</p>
+			        </div>
+			        <div class="card-action">
+			          	<button class="addToCart btn waves-effect waves-light"
+							data-itemName="Carrot Creme Soup"
+							data-itemCost="10">Add to cart
+						</button>
+			        </div>
+				</div>
+
+				<div class="card medium">
+					<div class="card-image">
+			          <img src="images/paradiseChicken.jpg">
+			        </div>
+			        <div class="card-content center-align">
+			          	<p>Paradise Chicken</p>
+			          	<p>$20</p>
+			        </div>
+			        <div class="card-action">
+			          	<button class="addToCart btn waves-effect 
+			          	waves-light"
+							data-itemName="Paradise Chicken"
+							data-itemCost="20">Add to cart
+						</button>
+			        </div>
+				</div>
+
+				<div class="card medium">
+					<div class="card-image">
+			          <img src="images/spinachSoup.jpg">
+			        </div>
+			        <div class="card-content center-align">
+			          	<p>Spinach Soup</p>
+			          	<p>$10</p>
+			        </div>
+			        <div class="card-action">
+			          	<button class="addToCart btn waves-effect waves-light"
+							data-itemName="Spinach Soup"
+							data-itemCost="10">Add to cart
+						</button>
+			        </div>
+				</div>
+
+				<div class="card medium">
+					<div class="card-image">
+			          <img src="images/salmonSalad.jpg">
+			        </div>
+			        <div class="card-content center-align">
+			          	<p>Salmon Salad</p>
+			          	<p class="center-align">$25</p>
+			        </div>
+			        <div class="card-action">
+			          	<button class="addToCart btn waves-effect waves-light"
+							data-itemName="Salmon Salad"
+							data-itemCost="25">Add to cart
+						</button>
+			        </div>
+				</div>
+
+				<div class="card medium">
+					<div class="card-image">
+			          <img src="images/shrimpPasta.jpg">
+			        </div>
+			        <div class="card-content center-align">
+			          	<p>Shrimp Pasta</p>
+			          	<p class="center-align">$22</p>
+			        </div>
+			        <div class="card-action">
+			          	<button class="addToCart btn waves-effect waves-light"
+							data-itemName="Shrimp Pasta"
+							data-itemCost="22">Add to cart
+						</button>
+			        </div>
+				</div>
+
+				<div class="card medium">
+					<div class="card-image">
+			          <img src="images/tropicalChickenSalad.jpg">
+			        </div>
+			        <div class="card-content center-align">
+			          	<p>Tropical Chicken Salad</p>
+			          	<p class="center-align">$20</p>
+			        </div>
+			        <div class="card-action">
+			          	<button class="addToCart btn waves-effect waves-light"
+							data-itemName="Tropical Chicken Salad"
+							data-itemCost="20">Add to cart
+						</button>
+			        </div>
+				</div>
+			</div>
+
+			<!-- ------------Start of Cart------------ -->
+			<div id="cart" class="grey lighten-3">
+				<div id="cartHeader" class="teal lighten-4">
+					<a id="hide-cart">
+						<i class="small material-icons hide-on-large-only white black-text">close</i>
+					</a>
+					<p class="flow-text">Shopping Cart</p>
+				</div>
+				<div id="cartItemsContainer">
+					<!-- EXAMPLE OF A CART ITEM -->
+					<!-- <div class="cartItem"
+					id="itemName"
+					data-itemName="x"
+					data-itemCost="y">
+						<p class="valign-wrapper">Tropical Chicken Salad</p>
+						<select name="quantity" class="browser-default">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+						<button class="deleteItem btn red 
+						waves-effect waves-light" data-linkedItem="itemName">
+							Remove
+						</button>
+					</div> -->
+				</div>
+				<div id="cartTotal" class="flow-text teal lighten-4">
+					<p>Total:</p>
+					<p id="total">$ 0.00</p>
+				</div>
+				<div id="cartCheckOut">
+					<button class = "btn waves-effect waves-light"
+							id="checkOut">Check Out</button>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/materialize.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
