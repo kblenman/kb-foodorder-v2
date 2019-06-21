@@ -25,8 +25,13 @@ body {
 	border-bottom: 1px solid gray;
 }
 
+/* Menu & Card Specific Structure & Styles */
 #menu .btn, #cart .btn {
 	width: 100%;
+}
+
+.card .card-action {
+	padding: 10px 2px;
 }
 
 /* Cart Specific Structure & Styles */
@@ -122,20 +127,32 @@ body {
 		/*Intially hide cart. Visibility will change by pressing cart button*/
 		display: none;
 		height: 80%;
-		width: 70%;
+		width: 90%;
 		position: absolute;
 		top: 50px;
 		z-index: 2;
 		border: 1px solid #4db6ac;
+	}
+
+	.card .card-action button {
+		font-size: 12px;
+	}
+
+	.cartItem p, .cartItem button {
+		font-size: 15px;
 	}
 }
 
 /* --------------------------------------------------
 	Tablet Specific - 750px to 992px
    -------------------------------------------------- */
-@media screen and (min-width: 750px) and (max-width: 992px) {
+@media screen and (min-width: 640px) and (max-width: 992px) {
 	#menu {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	#cart {
+		width: 70%;
 	}
 }
 
@@ -161,3 +178,12 @@ body {
 	}
 
 }
+
+/* --------------------------------------------------
+	Desktops (Xtra-Large) - Min Screen Width 1200px
+   -------------------------------------------------- */
+ @media screen and (min-width: 1200px) {
+ 	#menu {
+ 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ 	}
+ }
