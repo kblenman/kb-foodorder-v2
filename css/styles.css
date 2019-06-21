@@ -91,11 +91,12 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 60px 100px;
 	border-bottom: 1px solid black;
-	padding: 5px;
+	padding-bottom: 5px;
 }
 
 .cartItem > p {
 	display: flex;
+	align-items: center;
 	font-size: 1.3em;
 }
 
