@@ -72,7 +72,7 @@ function AddToCart(button) {
 				id="${itemName}"
 				data-itemName="${itemName}"
 				data-itemCost="${itemCost}">
-					<p class="valign-wrapper">${itemName}</p>
+					<p>${itemName}</p>
 					<select name="quantity"
 					class="browser-default">
 						<option value="1">1</option>
