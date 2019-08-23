@@ -1,7 +1,7 @@
 # kb-foodorder-v2
 
 ## About the Project
-Food Order v2 is the updated version of the [Island Breeze Food Order](https://kblenman.github.io/pages/FoodOrder/index.html) Application ([GitHub](https://github.com/kblenman/kblenman.github.io)). Both versions allow the user to add and remove items from their cart as well as change the quantity of each item in the cart. It calculates the cart total, displays it, and continually updates it as the user changes their selections.
+Food Order v2 is the updated version of the [Island Breeze Food Order](https://kblenman.github.io/food-order-v1/) Application ([GitHub](https://github.com/kblenman/food-order-v1)). Both versions allow the user to add and remove items from their cart as well as change the quantity of each item in the cart. It calculates the cart total, displays it, and continually updates it as the user changes their selections.
 	
 ### Technology Used
 * CSS
